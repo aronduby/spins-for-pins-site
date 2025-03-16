@@ -1,7 +1,9 @@
+---
 layout: post
 title: "It's Submitted!"
 date: 2025-03-15 20:48:01 -0400
 categories: news
+---
 
 # It's Submitted!
 
