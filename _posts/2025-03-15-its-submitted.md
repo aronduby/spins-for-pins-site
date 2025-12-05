@@ -2,6 +2,7 @@
 layout: post
 title: "It's Submitted!"
 date: 2025-03-15 20:48:01 -0400
+featuredImage: pic06.png
 ---
 
 The browser extension has now been submitted as an official [Firefox Add-Ons][firefox-add-ons], and once this silly
