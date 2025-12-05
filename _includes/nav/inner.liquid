@@ -1,0 +1,43 @@
+<ul>
+    {% assign pageAbsUrl = page.url | absolute_url %}
+
+    {% for item in include.items %}
+        {% if item.var %}
+            {% assign url = site[item.var] %}
+        {% else %}
+            {% assign first = item.url | slice: 0 %}
+            {% if first == '#' %}
+                {% assign url = item.url | prepend: page.url | relative_url %}
+            {% else %}
+                {% assign url = item.url | absolute_url %}
+            {% endif %}
+        {% endif %}
+
+        {% assign current = false %}
+        {% if pageAbsUrl == url %}
+            {% assign current = true %}
+        {% elsif page.section and item.section and page.section == item.section %}
+            {% assign current = true %}
+        {% endif %}
+
+        <li {% if current %}class="current"{% endif %}>
+            {% capture linkContent %}
+                {% if include.level == 0 %}
+                    {% assign pre = '<span>' %}
+                    {% assign post = '</span>' %}
+                {% else %}
+                    {% assign pre = '' %}
+                    {% assign post = '' %}
+                {% endif %}
+                {{ item.title | prepend: pre | append: post }}
+            {% endcapture %}
+
+            <a href="{{ url | relative_url }}">{{ linkContent }}</a>
+
+            {% if item.children %}
+                {% assign newLevel = include.level | plus:1 %}
+                {% include nav/inner.liquid items=item.children level=newLevel %}
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

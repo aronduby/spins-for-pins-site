@@ -1,0 +1,26 @@
+items:
+  -
+    title: Play Pinball
+    description: Play pinball like you always do, we integrate with the pinball sites you are already using.
+    icon: fa-burst
+    iconVariant: alt2
+  -
+    title: Click Button
+    description: Click the browser button to export from your active tab to Wheel of Names for giveaways.
+    icon: fa-hand-pointer
+    iconVariant:
+  -
+    title: Spin Wheel
+    description: Now that all your names are automatically added, all that's left is to spin the wheel.
+    icon: fa-rotate
+    iconVariant: alt
+
+actions:
+  -
+    href: '#'
+    variant: extensionLink
+    title: Download Now
+  -
+    href: '/about'
+    variant: alt
+    title: Learn More

@@ -1,0 +1,12 @@
+listing:
+  title: The Blog
+  empty: sorry, we couldn't find any posts yet, but be sure to check back soon
+  actions:
+    permalink:
+      title: Continue Reading
+      icon: solid fa-file-alt
+    secondary:
+      title: 33 Comments
+      icon: solid fa-comment
+
+comments: Comments

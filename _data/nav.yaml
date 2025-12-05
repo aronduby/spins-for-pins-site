@@ -1,0 +1,38 @@
+#
+# Nav Items
+# This is the data used for generating the site's navigation
+#
+# items:
+#   title: The title to display as the link
+#   url: The url the link goes to, relative is resolved with the site.baseUrl value
+#     [empty string]  site.baseUrl
+#     starts with #   the current page (with site.baseUrl) with the jump
+#     starts with /   absolute path, no use of site.baseUrl
+#     else            adds the site.baseUrl
+#   section?: [optional] string key to identify this item, if the current page has a matching `section` variable it will
+#     display the nav item as current. Useful to associate collections with top level nav items (like blog posts) and
+#     setting that as a config default
+#   children?: [optional] list of child nav items for this item
+#
+
+items:
+  -
+    title: Home
+    url: /
+  -
+    title: Download
+    children:
+      -
+        title: Chrome Extension
+        var: chromeUrl
+      -
+        title: Firefox Add-on
+        var: firefoxUrl
+  -
+    title: About
+    url: /about
+    section: about
+  -
+    title: Blog
+    url: /blog
+    section: blog
