@@ -1,0 +1,34 @@
+<section>
+    <header>
+        <h2>{{ site.data.footer.about.header }}</h2>
+    </header>
+    {% if site.data.footer.about.image %}
+        {% if site.data.footer.about.image.url %}
+            <a href="{{ site.data.footer.about.image.url | relative_url }}" class="image featured">
+        {% else %}
+            <div class="image featured">
+        {% endif %}
+
+            <img src="{{ site.data.footer.about.image.src | relative_url }}" alt="{{ site.data.footer.about.image.alt }}" />
+
+        {% if site.data.footer.about.image.url %}
+            </a>
+        {% else %}
+            </div>
+        {% endif %}
+    {% endif %}
+
+    <p>This is <strong class="nameWithLogo">Spins for Pins {% include logo-single-color.svg %}</strong>, a free browser extension for <a href="{{ site.chromeUrl }}" target="_blank">Chrome</a> and <a href="{{ site.firefoxUrl }}" target="_blank">Firefox</a>. I built it after seeing my friend over at <a href="https://rlmamusements.com/" target="_blank">RLM Amusements</a> manually copying/pasting names from one place to another, and figured other people might be doing that too.</p>
+
+    {% if site.data.footer.about.action %}
+        <footer>
+            <ul class="actions">
+                <li>
+                    <a href="{{ site.data.footer.about.action.url | relative_url }}" class="button alt2">
+                        <span><span>{{ site.data.footer.about.action.title }}</span></span>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    {% endif %}
+</section>

@@ -26,6 +26,15 @@ domain: spinsforpins.com
 url: "https://spinsforpins.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
+#
+# So we don't always have to copy/paste (although double check because there's probably places where we have to anyway)
+#
+chromeUrl: https://chromewebstore.google.com/detail/fjgnlojkelolalbodnhkdejjljfibcjh
+firefoxUrl: https://addons.mozilla.org/en-US/firefox/addon/spins-for-pins
+
+customStyles:
+  - /assets/css/spins-for-pins.css
+
 # Build settings
 plugins:
   - jekyll-feed

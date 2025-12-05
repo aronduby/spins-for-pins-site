@@ -1,0 +1,9 @@
+-
+  title: The Blog
+  collection: posts
+  limit: 2
+-
+  collection: posts
+  columns: 1
+  limit: 2
+  offset: 2

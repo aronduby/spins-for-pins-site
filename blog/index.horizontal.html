@@ -1,0 +1,39 @@
+---
+layout: no-sidebar
+section: blog
+---
+
+    <div class="row">
+        <div class="col-12">
+            <header class="major">
+                <h2>{{ site.data.posts.listing.title }}</h2>
+            </header>
+
+            <section class="box-grid">
+                {% for post in paginator.posts %}
+                    <section class="box horizontal">
+                        {% include boxes/box-header.liquid
+                            featuredImage = post.featuredImage
+                            title = post.title
+                            dateForSubtitle = post.dateForSubtitle
+                            date = post.date
+                            url = post.url
+                            headingLevel = 3
+                        %}
+
+                        <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 350 }}</p>
+
+                        <footer>
+                            {% include boxes/listings/actions/posts.liquid
+                                collection = "posts"
+                                index = forloop.index0
+                            %}
+                        </footer>
+                    </section>
+                {% endfor %}
+            </section>
+
+        </div>
+    </div>
+
+    {% include paginator-links.liquid %}

@@ -1,0 +1,29 @@
+---
+cssClass: homepage
+layout: base
+---
+
+{% include banner.liquid %}
+
+{% include intro.liquid %}
+
+    <div class="container">
+        <div class="row">
+
+            {% for item in site.data.home.collections %}
+            <div class="col-12">
+
+                {% include boxes/box-grid.liquid
+                    collection = item.collection
+                    title = item.title
+                    columns = item.columns
+                    limit = item.limit
+                    offset = item.offset
+                    suppressEmpty = item.suppressEmpty
+                %}
+
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
