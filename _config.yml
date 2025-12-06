@@ -32,9 +32,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 chromeUrl: https://chromewebstore.google.com/detail/fjgnlojkelolalbodnhkdejjljfibcjh
 firefoxUrl: https://addons.mozilla.org/en-US/firefox/addon/spins-for-pins
 
-customStyles:
-  - /assets/css/spins-for-pins.css
-
 # Build settings
 plugins:
   - jekyll-feed
